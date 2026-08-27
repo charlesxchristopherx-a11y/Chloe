@@ -1,11 +1,11 @@
 {
   "name": "chloe-nicoles-catering",
-  "local_port": 5173,
-  "entrypoint": "bunx serve -l 5173 -s .",
+  "local_port": 53712,
+  "entrypoint": "/usr/bin/node server.js",
   "publish": {
     "label": "chloe-nicoles-catering",
     "type": "http",
-    "entrypoint": "bunx serve -l ${PORT} -s .",
+    "entrypoint": "/usr/bin/node server.js",
     "published_port": 53712
   }
 }
