@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catering & Wedding Menus | Chloe Nicole's Catering</title>
+<meta name="description" content="Explore 49+ menu ideas from Chloe Nicole's Catering in Pittsburgh — brunch, homestyle dinners, grazing tables, and wedding menus.">
+<meta property="og:title" content="Catering & Wedding Menus | Chloe Nicole's Catering">
+<meta property="og:description" content="Explore 49+ menu ideas from Chloe Nicole's Catering in Pittsburgh.">
+<meta property="og:image" content="/chloe-nicole-logo.jpg">
+<meta property="og:type" content="website">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: #14110f;
+  color: #e8e3d9;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.skip-link { position: absolute; top: -100px; left: 16px; background: #c25754; color: #fff; padding: 8px 16px; border-radius: 6px; z-index: 100; transition: top .2s; }
+.skip-link:focus { top: 16px; }
+a { color: inherit; text-decoration: none; }
+
+/* HEADER */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(20,17,15,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232,227,217,0.08);
+}
+.header-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 24px;
+}
+.logo { height: 44px; width: auto; }
+.desktop-nav { display: flex; align-items: center; gap: 28px; }
+.desktop-nav a { font-size: 14.5px; color: #c5bfb3; transition: color .2s; }
+.desktop-nav a:hover, .desktop-nav a.active { color: #e8e3d9; }
+.desktop-nav a.active { border-bottom: 2px solid #c25754; padding-bottom: 2px; }
+.btn-quote {
+  background: #c25754; color: #fff;
+  padding: 10px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  transition: background .2s; white-space: nowrap;
+}
+.btn-quote:hover { background: #a34240; }
+.mobile-menu-btn { display: none; background: none; border: none; color: #e8e3d9; font-size: 26px; cursor: pointer; }
+.mobile-nav { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 280px; background: #1a1614; padding: 24px; z-index: 60; }
+.mobile-nav.open { display: flex; flex-direction: column; gap: 16px; }
+.mobile-nav a { font-size: 16px; color: #c5bfb3; padding: 8px 0; }
+.mobile-nav .btn-quote { text-align: center; }
+.mobile-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 55; }
+.mobile-backdrop.open { display: block; }
+
+/* PAGE HERO */
+.page-hero {
+  max-width: 1280px; margin: 0 auto; padding: 64px 24px 48px;
+  display: flex; align-items: center; gap: 48px;
+}
+.page-hero-text { flex: 1; }
+.page-hero-text h1 { font-size: clamp(36px,6vw,56px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+.page-hero-text p { font-size: 16px; color: #c5bfb3; max-width: 500px; margin-bottom: 24px; }
+.page-hero-meta { display: flex; gap: 12px; margin-bottom: 20px; }
+.pill { background: #2a2420; color: #e8e3d9; padding: 6px 14px; border-radius: 100px; font-size: 13px; }
+.page-hero-image { flex: 0 0 380px; border-radius: 12px; overflow: hidden; }
+.page-hero-image img { width: 100%; height: auto; display: block; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #c25754; color: #fff;
+  padding: 14px 28px; border-radius: 8px;
+  font-size: 15px; font-weight: 600;
+  transition: background .2s;
+}
+.btn-primary:hover { background: #a34240; }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #c25754;
+  padding: 14px 28px; border-radius: 8px; border: 1.5px solid #c25754;
+  font-size: 15px; font-weight: 600;
+  transition: all .2s;
+}
+.btn-secondary:hover { background: rgba(194,87,84,0.1); }
+
+/* POLICIES SECTION */
+.policies {
+  max-width: 1280px; margin: 0 auto; padding: 0 24px 80px;
+}
+.policies-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 20px;
+}
+.policy-card {
+  background: #1e1917; border: 1px solid rgba(232,227,217,0.06);
+  border-radius: 12px; padding: 28px;
+}
+.policy-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.policy-card p { font-size: 14px; color: #c5bfb3; line-height: 1.7; }
+
+/* MENU SECTION HEADER */
+.menu-section-header {
+  max-width: 1280px; margin: 0 auto; padding: 0 24px 32px;
+  text-align: center;
+}
+.menu-section-header h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.menu-section-header p { color: #c5bfb3; font-size: 15px; }
+
+/* MENU CARDS */
+.menus-container {
+  max-width: 1280px; margin: 0 auto; padding: 0 24px 80px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(360px,1fr));
+  gap: 24px;
+}
+.menu-card {
+  background: #1e1917; border: 1px solid rgba(232,227,217,0.06);
+  border-radius: 14px; overflow: hidden;
+}
+.menu-card-image { height: 200px; overflow: hidden; }
+.menu-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.menu-card-body { padding: 24px; }
+.menu-card-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.menu-card-body .menu-price { color: #c25754; font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.menu-card-body p { font-size: 14px; color: #c5bfb3; line-height: 1.7; margin-bottom: 16px; }
+.menu-items-list { list-style: none; }
+.menu-items-list li { font-size: 13.5px; color: #c5bfb3; padding: 4px 0; padding-left: 14px; position: relative; }
+.menu-items-list li::before { content: '·'; position: absolute; left: 2px; color: #c25754; font-weight: bold; }
+
+/* CTA BANNER */
+.cta-banner {
+  max-width: 1280px; margin: 0 auto 80px; padding: 0 24px;
+}
+.cta-banner-inner {
+  background: #1e1917; border: 1px solid rgba(232,227,217,0.06);
+  border-radius: 14px; padding: 48px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 24px;
+}
+.cta-banner-inner h2 { font-size: 24px; font-weight: 700; }
+.cta-banner-inner p { color: #c5bfb3; font-size: 14px; max-width: 500px; }
+
+/* GENERAL SECTIONS */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(232,227,217,0.08);
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+.footer-logo { height: 48px; margin-bottom: 16px; }
+.footer-nav { display: flex; justify-content: center; gap: 28px; margin-bottom: 24px; flex-wrap: wrap; }
+.footer-nav a { font-size: 14px; color: #c5bfb3; transition: color .2s; }
+.footer-nav a:hover { color: #e8e3d9; }
+.footer-tagline { font-size: 15px; color: #c5bfb3; margin-bottom: 8px; }
+.footer-copy { font-size: 13px; color: #8a8278; }
+.contact-row { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+.contact-row a { font-size: 14px; color: #c5bfb3; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+.contact-row a:hover { color: #e8e3d9; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-btn { display: block; }
+  .page-hero { flex-direction: column; padding: 40px 20px; }
+  .page-hero-image { flex: 0 0 auto; max-width: 100%; }
+  .header-inner { padding: 12px 16px; }
+  .menus-container { grid-template-columns: 1fr; }
+  .cta-banner-inner { flex-direction: column; text-align: center; }
+}
+
+/* FAQ ACCORDION (shared) */
+.faq-section { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+.faq-section h2 { font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 40px; }
+.faq-item { border-bottom: 1px solid rgba(232,227,217,0.08); }
+.faq-question {
+  width: 100%; background: none; border: none; color: #e8e3d9;
+  text-align: left; padding: 20px 0; font-size: 16px; font-weight: 600;
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+  gap: 16px;
+}
+.faq-question:hover { color: #fff; }
+.faq-icon { font-size: 20px; transition: transform .3s; color: #c25754; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; }
+.faq-answer.open { max-height: 400px; padding-bottom: 20px; }
+.faq-answer p { font-size: 14.5px; color: #c5bfb3; line-height: 1.7; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#menu-content">Skip to menus</a>
+
+<header>
+  <div class="header-inner">
+    <a href="/"><img src="/images/chloe-nicole-logo.jpg" alt="Chloe Nicole's Catering, LLC" class="logo"></a>
+    <nav class="desktop-nav">
+      <a href="/">Home</a>
+      <a href="/menus/" class="active">Food & menus</a>
+      <a href="/work/">Our work</a>
+      <a href="/#approach">Our approach</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#inquire" class="btn-quote">Request a quote →</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-backdrop" id="mobileBackdrop" onclick="toggleMobileMenu()"></div>
+<div class="mobile-nav" id="mobileNav">
+  <button style="align-self:flex-end;background:none;border:none;color:#e8e3d9;font-size:24px;cursor:pointer;margin-bottom:16px" onclick="toggleMobileMenu()">✕</button>
+  <a href="/">Home</a>
+  <a href="/menus/">Food & menus</a>
+  <a href="/work/">Our work</a>
+  <a href="/#approach">Our approach</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/#inquire" class="btn-quote">Request a quote →</a>
+</div>
+
+<main id="menu-content">
+  <section class="page-hero">
+    <div class="page-hero-text">
+      <h1>Find the flavors that feel like your gathering.</h1>
+      <p>Every event is yours — not ours. Browse 49 menu ideas organized by mood, season, and style, then let's build something that feels like you.</p>
+      <div class="page-hero-meta">
+        <span class="pill">49 menu ideas</span>
+        <span class="pill">Custom quotes</span>
+        <span class="pill">Dietary flexible</span>
+      </div>
+      <a href="/#inquire" class="btn-primary">Build my menu →</a>
+    </div>
+    <div class="page-hero-image">
+      <img src="/images/signature-grazing-table.webp" alt="A grazing table with charcuterie, fruit, and cheese" loading="eager">
+    </div>
+  </section>
+
+  <section class="policies">
+    <div class="policies-grid">
+      <div class="policy-card">
+        <h3>📋 Custom Quotes</h3>
+        <p>These menus are starting points. Every event gets a custom quote built around your guest count, tastes, and the vibe you're after. No two gatherings are alike.</p>
+      </div>
+      <div class="policy-card">
+        <h3>🥬 Dietary Options</h3>
+        <p>Vegan, gluten-free, vegetarian — all accommodated with care. Tell us what you need and we'll adapt any menu without sacrificing flavor or presentation.</p>
+      </div>
+      <div class="policy-card">
+        <h3>💳 Booking & Payment</h3>
+        <p>A 50% deposit secures your date. The balance is due eight days before your event. We keep it simple: no hidden fees, no surprises.</p>
+      </div>
+      <div class="policy-card">
+        <h3>🚗 Travel & Setup</h3>
+        <p>Based in Pittsburgh, serving the surrounding region. No fixed travel limit — let's talk. Setup fees typically range from $60–$100 depending on complexity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="menu-section-header">
+      <h2>Brunch & Daytime</h2>
+      <p>Fresh, bright, and perfect for morning celebrations</p>
+    </div>
+    <div class="menus-container">
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/fresh-fruit-board.webp" alt="Fresh fruit and pastries"></div>
+        <div class="menu-card-body">
+          <h3>Morning Gather</h3>
+          <div class="menu-price">Starting at $24/person</div>
+          <p>A warm brunch spread built for relaxed mornings — showers, reunions, and Sunday celebrations.</p>
+          <ul class="menu-items-list">
+            <li>Seasonal fruit display</li>
+            <li>Assorted pastries & muffins</li>
+            <li>Quiche — choice of vegetable or ham & cheese</li>
+            <li>Bacon or sausage</li>
+            <li>Roasted breakfast potatoes</li>
+            <li>Yogurt parfait bar with granola & berries</li>
+            <li>Coffee, tea & fresh orange juice</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/baked-comfort-dish.webp" alt="Baked comfort dishes"></div>
+        <div class="menu-card-body">
+          <h3>Biscuits & Blessings</h3>
+          <div class="menu-price">Starting at $20/person</div>
+          <p>A down-home Southern-inspired brunch. Church events, family reunions, morning wedding send-offs.</p>
+          <ul class="menu-items-list">
+            <li>Fresh buttermilk biscuits with honey butter & preserves</li>
+            <li>Scrambled eggs with cheddar & chives</li>
+            <li>Country sausage gravy</li>
+            <li>Crispy hash brown casserole</li>
+            <li>Fresh fruit salad</li>
+            <li>Iced tea & lemonade</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/glazed-party-bites.webp" alt="Glazed party bites"></div>
+        <div class="menu-card-body">
+          <h3>Sunrise Soirée</h3>
+          <div class="menu-price">Starting at $28/person</div>
+          <p>An elevated brunch for milestone mornings — engagement brunches, graduation celebrations, anniversary breakfasts.</p>
+          <ul class="menu-items-list">
+            <li>Smoked salmon display with capers, red onion & dill cream cheese</li>
+            <li>Mini avocado toasts with cherry tomato & microgreens</li>
+            <li>Belgian waffle station with fresh berries & whipped cream</li>
+            <li>Turkey sausage & chicken apple sausage</li>
+            <li>Roasted vegetable frittata</li>
+            <li>Mimosa & Bellini bar (non-alcoholic options available)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="menu-section-header">
+      <h2>Celebrations & Comfort</h2>
+      <p>Homestyle meals that bring people around the table</p>
+    </div>
+    <div class="menus-container">
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/fried-chicken.webp" alt="Fried chicken"></div>
+        <div class="menu-card-body">
+          <h3>Sunday Supper Table</h3>
+          <div class="menu-price">Starting at $22/person</div>
+          <p>A classic homestyle dinner — think grandma's kitchen, scaled for your crowd.</p>
+          <ul class="menu-items-list">
+            <li>Choice of entrée: Fried chicken, baked chicken, or meatloaf</li>
+            <li>Macaroni & cheese</li>
+            <li>Collard greens with smoked turkey</li>
+            <li>Candied yams</li>
+            <li>Cornbread with honey butter</li>
+            <li>Banana pudding or peach cobbler</li>
+            <li>Iced tea or lemonade</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/charcuterie-board-closeup.webp" alt="Charcuterie display"></div>
+        <div class="menu-card-body">
+          <h3>The Grazing Table</h3>
+          <div class="menu-price">Starting at $18/person</div>
+          <p>An abundant, self-serve spread perfect for cocktail hours, open houses, and celebrations where mingling matters.</p>
+          <ul class="menu-items-list">
+            <li>Artisan cheese selection (4–6 varieties)</li>
+            <li>Cured meats & charcuterie</li>
+            <li>Seasonal fresh fruits</li>
+            <li>Marinated olives, pickles & roasted nuts</li>
+            <li>Crostini, crackers & flatbreads</li>
+            <li>Honeycomb, fig jam & whole-grain mustard</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/carla-at-grazing-table.webp" alt="Grazing table display"></div>
+        <div class="menu-card-body">
+          <h3>Backyard Cookout</h3>
+          <div class="menu-price">Starting at $20/person</div>
+          <p>All the classics, done right. Summer birthdays, block parties, graduations.</p>
+          <ul class="menu-items-list">
+            <li>Grilled burgers & hot dogs with all the fixings</li>
+            <li>BBQ chicken</li>
+            <li>Creamy coleslaw</li>
+            <li>Baked beans</li>
+            <li>Corn on the cob</li>
+            <li>Pasta salad</li>
+            <li>Watermelon slices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="menu-section-header">
+      <h2>Formal Occasions</h2>
+      <p>Elegant dining for life's most important moments</p>
+    </div>
+    <div class="menus-container">
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/glazed-party-bites.webp" alt="Elegant appetizers"></div>
+        <div class="menu-card-body">
+          <h3>Evening Celebration</h3>
+          <div class="menu-price">Starting at $38/person</div>
+          <p>A plated or buffet dinner for weddings, galas, and formal receptions.</p>
+          <ul class="menu-items-list">
+            <li>Choice of entrée: Stuffed chicken breast, herb-crusted salmon, or braised short ribs</li>
+            <li>Garlic mashed potatoes</li>
+            <li>Seasonal roasted vegetables</li>
+            <li>Mixed green salad with vinaigrette</li>
+            <li>Fresh dinner rolls with butter</li>
+            <li>Choice of dessert: cake, tarts, or bread pudding</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/signature-grazing-table.webp" alt="Wedding spread"></div>
+        <div class="menu-card-body">
+          <h3>Wedding Package</h3>
+          <div class="menu-price">Starting at $45/person</div>
+          <p>Our most comprehensive offering. Cocktail hour through cake cutting, with a dedicated coordinator.</p>
+          <ul class="menu-items-list">
+            <li>Passed appetizers (3 selections) during cocktail hour</li>
+            <li>Grazing table display</li>
+            <li>Plated entrée (2 choices) with sides</li>
+            <li>Late-night snack station</li>
+            <li>Coffee & tea service</li>
+            <li>Professional wait staff included</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/charcuterie-board-closeup.webp" alt="Holiday spread"></div>
+        <div class="menu-card-body">
+          <h3>Holiday Feast</h3>
+          <div class="menu-price">Starting at $32/person</div>
+          <p>Thanksgiving, Christmas, and holiday celebrations — all the tradition, none of the stress.</p>
+          <ul class="menu-items-list">
+            <li>Roasted turkey or glazed ham</li>
+            <li>Cornbread dressing</li>
+            <li>Green bean casserole</li>
+            <li>Macaroni & cheese</li>
+            <li>Cranberry sauce (house-made)</li>
+            <li>Sweet potato pie or pecan pie</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="menu-section-header">
+      <h2>Summer Gatherings</h2>
+      <p>Light, fresh, and made for the season</p>
+    </div>
+    <div class="menus-container">
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/fresh-fruit-board.webp" alt="Fresh fruit board"></div>
+        <div class="menu-card-body">
+          <h3>Garden Party</h3>
+          <div class="menu-price">Starting at $26/person</div>
+          <p>Light and elegant — showers, luncheons, and daytime receptions in warm weather.</p>
+          <ul class="menu-items-list">
+            <li>Assorted tea sandwiches (chicken salad, cucumber, egg salad)</li>
+            <li>Seasonal fruit platter</li>
+            <li>Mixed green salad with berries & candied pecans</li>
+            <li>Lemon bars & mini tarts</li>
+            <li>Iced tea, lemonade & infused water</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image"><img src="/images/grazing-board-display.webp" alt="Summer cookout"></div>
+        <div class="menu-card-body">
+          <h3>Summer Celebration</h3>
+          <div class="menu-price">Starting at $22/person</div>
+          <p>Juneteenth, Fourth of July, and all the summer holidays — festive, abundant, and delicious.</p>
+          <ul class="menu-items-list">
+            <li>BBQ ribs & grilled chicken</li>
+            <li>Potato salad</li>
+            <li>Baked beans</li>
+            <li>Corn on the cob with herb butter</li>
+            <li>Red velvet cake or berry cobbler</li>
+            <li>Lemonade & sweet tea</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <div>
+        <h2>Don't see exactly what you need?</h2>
+        <p>Every menu is a starting point. Tell us about your gathering and we'll build a custom quote — no obligation, no pressure.</p>
+      </div>
+      <a href="/#inquire" class="btn-primary">Start my custom quote →</a>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <h2>Menu FAQ</h2>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">Can you accommodate dietary restrictions? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>Absolutely. We routinely accommodate vegan, vegetarian, gluten-free, dairy-free, and nut-free needs. Every menu has flexible substitutions — just let us know when you inquire and we'll handle the rest.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">How far in advance should I book? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>For larger events (50+ guests), we recommend 4–6 weeks. Smaller gatherings can often be accommodated with 2–3 weeks' notice. That said, we're flexible — reach out and we'll do our best to make it work.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">Do you provide staff for the event? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>Yes — professional wait staff and setup/cleanup crew are included with most packages. For drop-off catering, staff isn't required but can be added. Every quote spells out staffing so there are no surprises.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">What areas do you serve? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>We're based in Pittsburgh and serve the greater Western Pennsylvania region. No hard travel limit — if your venue is within a reasonable drive, we'll be there. Travel fees are quoted upfront.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="/images/chloe-nicole-logo.jpg" alt="Chloe Nicole's Catering, LLC" class="footer-logo">
+  <div class="contact-row">
+    <a href="tel:4125838628">📞 (412) 583-8628</a>
+    <a href="tel:4122943560">📱 (412) 294-3560</a>
+    <a href="mailto:gmhead1@verizon.net">✉️ gmhead1@verizon.net</a>
+  </div>
+  <nav class="footer-nav">
+    <a href="/">Home</a>
+    <a href="/menus/">Food & menus</a>
+    <a href="/work/">Our work</a>
+    <a href="/#approach">Our approach</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#inquire">Request a quote</a>
+  </nav>
+  <p class="footer-tagline">Gather beautifully. Celebrate deliciously.</p>
+  <p class="footer-copy">© 2026 Chloe Nicole's Catering, LLC. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+  document.getElementById('mobileBackdrop').classList.toggle('open');
+}
+function toggleFAQ(btn) {
+  var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('.faq-icon');
+  answer.classList.toggle('open');
+  icon.textContent = answer.classList.contains('open') ? '−' : '+';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Work | Chloe Nicole's Catering</title>
+<meta name="description" content="Browse real events catered by Chloe Nicole's Catering in Pittsburgh — weddings, celebrations, and community gatherings.">
+<meta property="og:title" content="Our Work | Chloe Nicole's Catering">
+<meta property="og:description" content="Real events from Pittsburgh's warmest catering — weddings, celebrations, and more.">
+<meta property="og:image" content="/images/chloe-nicole-logo.jpg">
+<meta property="og:type" content="website">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: #14110f;
+  color: #e8e3d9;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.skip-link { position: absolute; top: -100px; left: 16px; background: #c25754; color: #fff; padding: 8px 16px; border-radius: 6px; z-index: 100; transition: top .2s; }
+.skip-link:focus { top: 16px; }
+a { color: inherit; text-decoration: none; }
+
+/* HEADER */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(20,17,15,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232,227,217,0.08);
+}
+.header-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 24px;
+}
+.logo { height: 44px; width: auto; }
+.desktop-nav { display: flex; align-items: center; gap: 28px; }
+.desktop-nav a { font-size: 14.5px; color: #c5bfb3; transition: color .2s; }
+.desktop-nav a:hover, .desktop-nav a.active { color: #e8e3d9; }
+.desktop-nav a.active { border-bottom: 2px solid #c25754; padding-bottom: 2px; }
+.btn-quote {
+  background: #c25754; color: #fff;
+  padding: 10px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  transition: background .2s; white-space: nowrap;
+}
+.btn-quote:hover { background: #a34240; }
+.mobile-menu-btn { display: none; background: none; border: none; color: #e8e3d9; font-size: 26px; cursor: pointer; }
+.mobile-nav { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 280px; background: #1a1614; padding: 24px; z-index: 60; }
+.mobile-nav.open { display: flex; flex-direction: column; gap: 16px; }
+.mobile-nav a { font-size: 16px; color: #c5bfb3; padding: 8px 0; }
+.mobile-nav .btn-quote { text-align: center; }
+.mobile-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 55; }
+.mobile-backdrop.open { display: block; }
+
+/* PAGE HERO */
+.page-hero {
+  max-width: 1280px; margin: 0 auto; padding: 64px 24px 48px;
+  display: flex; align-items: center; gap: 48px;
+}
+.page-hero-text { flex: 1; }
+.page-hero-text h1 { font-size: clamp(36px,6vw,56px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+.page-hero-text p { font-size: 16px; color: #c5bfb3; max-width: 500px; margin-bottom: 24px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #c25754; color: #fff;
+  padding: 14px 28px; border-radius: 8px;
+  font-size: 15px; font-weight: 600;
+  transition: background .2s;
+}
+.btn-primary:hover { background: #a34240; }
+.page-hero-image { flex: 0 0 380px; border-radius: 12px; overflow: hidden; }
+.page-hero-image img { width: 100%; height: auto; display: block; }
+
+/* GALLERY */
+.gallery-section { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
+.gallery-intro { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+.gallery-intro h2 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+.gallery-intro p { color: #c5bfb3; font-size: 15px; line-height: 1.7; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 20px;
+}
+.gallery-item {
+  border-radius: 12px; overflow: hidden;
+  background: #1e1917; border: 1px solid rgba(232,227,217,0.06);
+  transition: transform .2s;
+}
+.gallery-item:hover { transform: translateY(-2px); }
+.gallery-item img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.gallery-item .caption { padding: 16px; font-size: 14px; color: #c5bfb3; }
+
+/* CTA BANNER */
+.cta-banner {
+  max-width: 1280px; margin: 0 auto 80px; padding: 0 24px;
+}
+.cta-banner-inner {
+  background: #1e1917; border: 1px solid rgba(232,227,217,0.06);
+  border-radius: 14px; padding: 48px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 24px;
+}
+.cta-banner-inner h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.cta-banner-inner p { color: #c5bfb3; font-size: 14px; max-width: 500px; }
+
+/* TESTIMONIALS */
+.testimonials { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
+.testimonials h2 { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 40px; }
+.testimonial-card {
+  background: #1e1917; border: 1px solid rgba(232,227,217,0.06);
+  border-radius: 12px; padding: 32px; margin-bottom: 20px;
+}
+.testimonial-card blockquote { font-size: 16px; line-height: 1.7; margin-bottom: 12px; color: #e8e3d9; font-style: italic; }
+.testimonial-card .attribution { font-size: 14px; color: #c25754; font-weight: 600; }
+.testimonial-card .event-type { font-size: 13px; color: #8a8278; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(232,227,217,0.08);
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+.footer-logo { height: 48px; margin-bottom: 16px; }
+.footer-nav { display: flex; justify-content: center; gap: 28px; margin-bottom: 24px; flex-wrap: wrap; }
+.footer-nav a { font-size: 14px; color: #c5bfb3; transition: color .2s; }
+.footer-nav a:hover { color: #e8e3d9; }
+.footer-tagline { font-size: 15px; color: #c5bfb3; margin-bottom: 8px; }
+.footer-copy { font-size: 13px; color: #8a8278; }
+.contact-row { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+.contact-row a { font-size: 14px; color: #c5bfb3; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+.contact-row a:hover { color: #e8e3d9; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-btn { display: block; }
+  .page-hero { flex-direction: column; padding: 40px 20px; }
+  .page-hero-image { flex: 0 0 auto; max-width: 100%; }
+  .header-inner { padding: 12px 16px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .cta-banner-inner { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#work-content">Skip to our work</a>
+
+<header>
+  <div class="header-inner">
+    <a href="/"><img src="/images/chloe-nicole-logo.jpg" alt="Chloe Nicole's Catering, LLC" class="logo"></a>
+    <nav class="desktop-nav">
+      <a href="/">Home</a>
+      <a href="/menus/">Food & menus</a>
+      <a href="/work/" class="active">Our work</a>
+      <a href="/#approach">Our approach</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#inquire" class="btn-quote">Request a quote →</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-backdrop" id="mobileBackdrop" onclick="toggleMobileMenu()"></div>
+<div class="mobile-nav" id="mobileNav">
+  <button style="align-self:flex-end;background:none;border:none;color:#e8e3d9;font-size:24px;cursor:pointer;margin-bottom:16px" onclick="toggleMobileMenu()">✕</button>
+  <a href="/">Home</a>
+  <a href="/menus/">Food & menus</a>
+  <a href="/work/">Our work</a>
+  <a href="/#approach">Our approach</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/#inquire" class="btn-quote">Request a quote →</a>
+</div>
+
+<main id="work-content">
+  <section class="page-hero">
+    <div class="page-hero-text">
+      <h1>Made for the moment.<br>Remembered around the table.</h1>
+      <p>Every event gets the same thing: a menu built around your people, a table that feels like home, and a host who's genuinely in your corner.</p>
+      <a href="/#inquire" class="btn-primary">Start your event →</a>
+    </div>
+    <div class="page-hero-image">
+      <img src="/images/signature-grazing-table.webp" alt="A full grazing table display" loading="eager">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-intro">
+      <h2>Real events. Real food. Real people.</h2>
+      <p>No stock photography — every image here is from an actual Chloe Nicole's event. Browse the gallery, then let's make your gathering the next one.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="/images/signature-grazing-table.webp" alt="Wedding grazing table with charcuterie, fruit, and cheese" loading="lazy">
+        <div class="caption">Wedding reception — grazing table for 120 guests</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/grazing-board-display.webp" alt="Grazing board with cured meats and cheeses" loading="lazy">
+        <div class="caption">Corporate event — artisan charcuterie display</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/carla-at-grazing-table.webp" alt="Carla at a grazing table setup" loading="lazy">
+        <div class="caption">Graduation celebration — full-service setup</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/charcuterie-board-closeup.webp" alt="Close-up charcuterie board with meats, cheese, and nuts" loading="lazy">
+        <div class="caption">Baby shower — charcuterie & grazing board</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/baked-comfort-dish.webp" alt="Baked comfort dish" loading="lazy">
+        <div class="caption">Family reunion — homestyle comfort spread</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/fried-chicken.webp" alt="Fried chicken platter" loading="lazy">
+        <div class="caption">Block party — Southern-style cookout</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/fresh-fruit-board.webp" alt="Fresh fruit and pastry display" loading="lazy">
+        <div class="caption">Bridal shower brunch — fresh fruit & pastries</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/glazed-party-bites.webp" alt="Glazed party appetizers" loading="lazy">
+        <div class="caption">Holiday party — passed appetizers</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/carla-el.webp" alt="Carla El, owner" loading="lazy">
+        <div class="caption">Owner Carla El — the heart behind every event</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What clients say</h2>
+    <div class="testimonial-card">
+      <blockquote>"Carla made our wedding reception absolutely perfect. The food was incredible — our guests are still talking about the grazing table — and her calm presence made the whole day feel effortless. I didn't worry about a single thing."</blockquote>
+      <div class="attribution">— Jasmine & Marcus T.</div>
+      <div class="event-type">Wedding reception, 95 guests</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote>"We hired Chloe Nicole's for my mom's 70th birthday. Carla treated our family like her own. The Sunday Supper menu was exactly what we wanted — it felt like grandma's kitchen but elevated. Mom cried happy tears."</blockquote>
+      <div class="attribution">— David H.</div>
+      <div class="event-type">Family birthday celebration, 40 guests</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote>"Professional, warm, and the food was outstanding. Carla helped us plan a corporate luncheon on short notice and delivered beyond expectations. Her staff was polished and the setup was beautiful."</blockquote>
+      <div class="attribution">— Pittsburgh Community Foundation</div>
+      <div class="event-type">Corporate luncheon, 60 guests</div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <div>
+        <h2>Ready to make your gathering the next one in the gallery?</h2>
+        <p>Every event starts with a conversation. Tell us what you're planning — no commitment, no pressure.</p>
+      </div>
+      <a href="/#inquire" class="btn-primary">Request a quote →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="/images/chloe-nicole-logo.jpg" alt="Chloe Nicole's Catering, LLC" class="footer-logo">
+  <div class="contact-row">
+    <a href="tel:4125838628">📞 (412) 583-8628</a>
+    <a href="tel:4122943560">📱 (412) 294-3560</a>
+    <a href="mailto:gmhead1@verizon.net">✉️ gmhead1@verizon.net</a>
+  </div>
+  <nav class="footer-nav">
+    <a href="/">Home</a>
+    <a href="/menus/">Food & menus</a>
+    <a href="/work/">Our work</a>
+    <a href="/#approach">Our approach</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#inquire">Request a quote</a>
+  </nav>
+  <p class="footer-tagline">Gather beautifully. Celebrate deliciously.</p>
+  <p class="footer-copy">© 2026 Chloe Nicole's Catering, LLC. Pittsburgh, PA.</p>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+  document.getElementById('mobileBackdrop').classList.toggle('open');
+}
+</script>
+</body>
+</html>
