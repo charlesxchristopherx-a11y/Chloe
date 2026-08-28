@@ -215,7 +215,6 @@ details summary::-webkit-details-marker { display: none; }
   </div>
 </section>
 
-<!-- TESTIMONIALS SECTION (added from Georgetta's email) -->
 <section class="section promise-section" style="background:var(--paper)">
   <div class="shell" style="max-width:900px;margin:0 auto">
     <p class="eyebrow eyebrow-dark" style="text-align:center">What people say</p>
@@ -306,7 +305,11 @@ details summary::-webkit-details-marker { display: none; }
         <small>chloe@chloenicolescatering.com</small>
       </div>
     </div>
-    <form class="inquiry-form" action="#" method="POST">
+    <form class="inquiry-form" action="https://formsubmit.co/chloe@chloenicolescatering.com" method="POST">
+      <input type="hidden" name="_subject" value="New catering inquiry — Chloe Nicole's Catering website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.chloenicolescatering.com/?inquiry=sent#inquire">
       <div class="field-row">
         <label>Your name<input autocomplete="name" required name="name"></label>
         <label>Email<input type="email" autocomplete="email" required name="email"></label>
@@ -418,6 +421,14 @@ document.querySelectorAll('.menu-card summary, .wedding-menu-list summary').forE
   summary.addEventListener('click', function(e) {
     const details = this.parentElement;
     // Let the native toggle happen
+  });
+});
+
+// Close the mobile nav panel whenever a link inside it is clicked
+document.querySelectorAll('.mobile-nav-panel a').forEach(link => {
+  link.addEventListener('click', function() {
+    const panel = document.getElementById('mobile-navigation');
+    if (panel.classList.contains('is-open')) toggleMenu();
   });
 });
 </script>
